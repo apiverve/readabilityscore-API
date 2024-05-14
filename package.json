@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/readabilityscore-API.git"
   },
   "keywords": [
-    "readability score"," readability score api"," readability score tool"," readability score software"," readability score service"," readability score library"," readability score sdk"," readability score code"," readability score script"," readability score program"," readability score application"," readability score app"," readability score utility"," readability score helper"," readability score helper tool"," readability score helper software"," readability score helper service"," readability score helper library"," readability score helper sdk"," readability score helper code"," readability score helper script"," readability score helper program"," readability score helper application"," readability score helper app"," readability score helper utility"," readability score helper"
+    "readability score","readability score api","readability score tool","readability score software","readability score service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
