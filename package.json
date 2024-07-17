@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/readabilityscore",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.",
   "main": "index.js",
   "scripts": {
