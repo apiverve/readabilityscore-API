@@ -81,9 +81,9 @@ api.execute(query, function (error, data) {
       "fleschKincaidGrade": 23.6,
       "gunningFog": 26.95,
       "colemanLiauIndex": 13.19,
-      "smogIndex": 0,
+      "smogIndex": 22.08,
       "automatedReadabilityIndex": 27.8,
-      "daleChallReadabilityScore": 10.9
+      "daleChallReadabilityScore": 17
     },
     "readabilityText": {
       "fleschReadingEase": "very confusing",
@@ -116,7 +116,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2024 APIVerve, and Evlar LLC
+Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
