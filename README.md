@@ -1,5 +1,4 @@
-Text Readability Score API
-============
+# Text Readability Score API
 
 Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.
 
@@ -7,54 +6,62 @@ Readability Score is a simple tool for calculating the readability score of text
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Text Readability Score API](https://apiverve.com/marketplace/api/readabilityscore)
+This is a Javascript Wrapper for the [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore)
 
 ---
 
 ## Installation
-	npm install @apiverve/readabilityscore --save
+
+Using npm:
+```shell
+npm install @apiverve/readabilityscore
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/readabilityscore
+```
 
 ---
 
 ## Configuration
 
-Before using the readabilityscore API client, you have to setup your account and obtain your API Key.  
+Before using the Text Readability Score API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Text Readability Score API documentation is found here: [https://docs.apiverve.com/api/readabilityscore](https://docs.apiverve.com/api/readabilityscore).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Text Readability Score API documentation is found here: [https://docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var readabilityscoreAPI = require('@apiverve/readabilityscore');
-var api = new readabilityscoreAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const readabilityscoreAPI = require('@apiverve/readabilityscore');
+const api = new readabilityscoreAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   "text": "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -64,9 +71,52 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  "text": "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  "text": "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -89,8 +139,7 @@ api.execute(query, function (error, data) {
       "fleschReadingEase": "very confusing",
       "daleChallReadabilityScore": "average 13th to 15th-grade (college) student"
     }
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -103,6 +152,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
